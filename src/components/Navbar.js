@@ -23,19 +23,19 @@ const Navbar = () => {
       </button>
 
       <div className={`md:flex md:flex-row md:gap-12 text-left md:text-center md:justify-end md:py-10 px-4 md:px-28 ${isMenuOpen ? 'block' : 'hidden'}`}>
-        <h3 className="text-xl text-white cursor-pointer hover:bg-fuchsia-700/30 hover:rounded-lg">
+        <h3 className="text-xl text-white cursor-pointer hover:bg-fuchsia-700/30 md:hover:bg-transparent hover:rounded-lg">
           <Link to="Home" smooth={true} duration={500}>
             Home
           </Link>
           <hr className='md:hidden'/>
         </h3>
-        <h3 className="text-xl text-white cursor-pointer hover:bg-fuchsia-700/30 hover:rounded-lg">
+        <h3 className="text-xl text-white cursor-pointer hover:bg-fuchsia-700/30 md:hover:bg-transparent hover:rounded-lg">
           <Link to="Skills" smooth={true} duration={500}>
             Skills
           </Link>
           <hr className='md:hidden'/>
         </h3>
-        <h3 className="text-xl text-white cursor-pointer hover:bg-fuchsia-700/30 hover:rounded-lg">
+        <h3 className="text-xl text-white cursor-pointer hover:bg-fuchsia-700/30 md:hover:bg-transparent hover:rounded-lg">
           <Link to="Projects" smooth={true} duration={500}>
             Projects
           </Link>
@@ -44,7 +44,7 @@ const Navbar = () => {
 
         <div className="my-3 md:mt-0 flex flex-row justify-between gap-2 mb-1">
           <Link to="Message" smooth={true} duration={500}>
-            <button className="md:hidden text-white font-bold border border-white h-10 px-2 rounded-lg hover:bg-fuchsia-700/30 ">Let's Connect</button>
+            <button className="md:hidden text-white font-bold border border-white h-10 px-2 rounded-lg hover:bg-fuchsia-700/30 md:hover:bg-transparent ">Let's Connect</button>
           </Link>
 
           <button onClick={() => handleChange('https://www.facebook.com/hiba.ghazi.395')}>
