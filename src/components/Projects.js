@@ -3,23 +3,24 @@ import React, { useState } from 'react';
 const Modal = ({ closeModal, imageURL, description}) => {
   return (
     <div className="fixed top-0 left-1/2 transform -translate-x-1/2 w-full h-screen flex items-center justify-center bg-black bg-opacity-30 backdrop-blur-md overflow-y-auto">
-  <div className="relative w-full max-w-3xl mx-auto my-auto">
-    <div className="flex flex-row">
-      <div className="flex flex-col w-1/2 ">
-        <img src={imageURL} alt="Project" className="w-full h-full rounded-lg" />
-      </div>
+      <div className="relative md:w-full max-w-3xl mx-auto my-auto">
+        <div className="flex flex-col md:flex-row">
+          
+          <div className="flex flex-col md:w-1/2 ">
+            <img src={imageURL} alt="Project" className="w-full h-full rounded-lg" />
+          </div>
 
-      <div className="w-1/2 p-[100px]">
-        <p className="text-xl font-bold mb-4">Project Description:</p>
-        <p>{description}</p>
+          <div className="md:w-1/2 p-5 md:p-[100px]">
+            <p className="text-xl font-bold mb-4">Project Description:</p>
+            <p>{description}</p>
+          </div>
+        </div>
+
+        <button onClick={closeModal} className="absolute top-0 right-0 text-55106D text-2xl cursor-pointer">
+          &times;
+        </button>
       </div>
     </div>
-
-    <button onClick={closeModal} className="absolute top-0 right-0 text-white text-2xl cursor-pointer">
-      &times;
-    </button>
-  </div>
-</div>
 
   );
 }
@@ -128,7 +129,7 @@ const Projects = () => {
 
     return (
       <div className='flex justify-center'>
-        <div className="grid grid-cols-3 gap-4 mt-10">
+        <div className="grid md:grid-cols-3 grid-cols-2 gap-3 md:gap-4 mt-10">
           {photos.map((link, index) => (
             <div key={index} className="relative">
               
@@ -136,7 +137,7 @@ const Projects = () => {
                 src={selectedImage === link ? link.image : link.placeholderImage}
                 alt="Project"
                 onClick={() => openModal(link)}
-                className="w-[300px] h-[140px] rounded-[40px] transition-opacity ease-in-out duration-300"
+                className="md:w-[300px] md:h-[140px] w-[200px] h-[100px] rounded-[40px] transition-opacity ease-in-out duration-300"
               />
 
               {selectedImage !== link && (
@@ -157,7 +158,7 @@ const Projects = () => {
       <div className="flex flex-row justify-center">
         <button
           onClick={() => setSelectedCategory('Web')}
-          className={`border border-white px-16 py-2 rounded-l-[20px] ${
+          className={`border border-white px-6 py-2 md:px-16 md:py-2 rounded-l-[20px] ${
             selectedCategory === 'Web' ? 'bg-gradient-to-r from-fuchsia-500 to-55106D' : ''
           }`}>Web
         </button>
@@ -165,7 +166,7 @@ const Projects = () => {
 
         <button
           onClick={() => setSelectedCategory('E-commerce website')}
-          className={`border border-white px-12 py-2 ${
+          className={`border border-white px-6 md:px-12 md:py-2 ${
             selectedCategory === 'E-commerce website' ? ' bg-gradient-to-r from-fuchsia-500 to-55106D' : ''
           }`}>E-commerce website
         </button>
@@ -173,7 +174,7 @@ const Projects = () => {
 
         <button
           onClick={() => setSelectedCategory('Design')}
-          className={`border border-white px-16 py-2 rounded-r-[20px] ${
+          className={`border border-white px-6 md:px-12 md:py-2 rounded-r-[20px] ${
             selectedCategory === 'Design' ? 'bg-gradient-to-r from-fuchsia-500 to-55106D' : ''
           }`}>Design
         </button>

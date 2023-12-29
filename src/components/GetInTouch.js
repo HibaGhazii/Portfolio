@@ -23,23 +23,23 @@ const GetInTouch = () => {
   }
 
   return (
-    <div id='Message' className="flex flex-row bg-[url('../public/img/footer-bg.png')] bg-cover mt-28 pb-28">
-      <div className='w-1/2 pl-32'>
-        <img src="/img/contact-img.svg" className='w-[500px] h-[500px]' />
+    <div id='Message' className="flex flex-col md:items-center md:flex-row bg-[url('../public/img/footer-bg.png')] bg-cover mt-28 pb-28">
+      <div className='md:w-1/2 md:pl-32'>
+        <img src="/img/contact-img.svg" className='w-[400px] h-[400px] md:w-[500px] md:h-[500px]' />
       </div>
 
-      <form onSubmit={handleSubmit} className='w-1/2 py-12 pl-16 flex flex-col gap-y-2 text-black'>
-        <p className='text-white font-bold text-3xl pb-6'>Get In Touch</p>
-        <div>
-          <input type="text" required value={FirstName} onChange={(e)=>{setFirstName(e.target.value)}} placeholder='First Name' className='p-5 h-12 w-[270px] mr-1 rounded-[14px] placeholder:text-757575 shadow-md shadow-fuchsia-400 focus:outline-none'/>
-          <input type="text" required value={LastName} onChange={(e)=>{setLastName(e.target.value)}} placeholder='Last Name' className='p-5 border border-white h-12 w-[270px] rounded-[14px] placeholder:text-757575 shadow-md shadow-fuchsia-400 focus:outline-none'/>
+      <form onSubmit={handleSubmit} className='md:w-1/2 md:py-12 py-4 md:pl-16 flex flex-col gap-y-2 text-black'>
+        <p className='text-white font-bold text-3xl pb-2 md:pb-6'>Get In Touch</p>
+        <div className='flex flex-row'>
+          <input type="text" required value={FirstName} onChange={(e)=>{setFirstName(e.target.value)}} placeholder='First Name' className='p-5 h-12 w-[200px] md:w-[270px] mr-1 rounded-[14px] placeholder:text-757575 shadow-md shadow-fuchsia-400 focus:outline-none focus:border-none focus:ring-fuchsia-400'/>
+          <input type="text" required value={LastName} onChange={(e)=>{setLastName(e.target.value)}} placeholder='Last Name' className='p-5 h-12 w-[200px] md:w-[270px] rounded-[14px] placeholder:text-757575 shadow-md shadow-fuchsia-400 focus:outline-none focus:border-none focus:ring-fuchsia-400'/>
         </div>
-        <div>
-          <input type="text" value={Email} onChange={(e)=>{setEmail(e.target.value)}} placeholder='Email' className='p-5 border border-white h-12 w-[270px] mr-1 rounded-[14px] placeholder:text-757575 shadow-md shadow-fuchsia-400 focus:outline-none'/>
-          <input type="text" value={PhoneNumber} onChange={(e)=>{setPhoneNumber(e.target.value)}} required placeholder='Phone Number' className='p-5 border border-white h-12 w-[270px] rounded-[14px] placeholder:text-757575 shadow-md shadow-fuchsia-400 focus:outline-none'/>
+        <div className='flex flex-row'>
+          <input type="text" value={Email} onChange={(e)=>{setEmail(e.target.value)}} placeholder='Email' className='p-5 h-12 w-[200px] md:w-[270px] mr-1 rounded-[14px] placeholder:text-757575 shadow-md shadow-fuchsia-400 focus:outline-none focus:border-none focus:ring-fuchsia-400'/>
+          <input type="text" value={PhoneNumber} onChange={(e)=>{setPhoneNumber(e.target.value)}} required placeholder='Phone Number' className='p-5 h-12 w-[200px] md:w-[270px] rounded-[14px] placeholder:text-757575 shadow-md shadow-fuchsia-400 focus:outline-none focus:border-none focus:ring-fuchsia-400'/>
         </div>
-        <div>
-          <textarea required value={Message} onChange={(e)=>{setMessage(e.target.value)}} placeholder='Message' className="px-5 py-3 border-4 border-white w-[545px] h-[160px] rounded-[14px] placeholder:text-757575 shadow-md shadow-fuchsia-400 focus:outline-none" ></textarea>
+        <div className=''>
+          <textarea required value={Message} onChange={(e)=>{setMessage(e.target.value)}} placeholder='Message' className="px-5 py-3 w-full md:w-[545px] h-[160px] rounded-[14px] placeholder:text-757575 shadow-md shadow-fuchsia-400 focus:outline-none focus:border-none focus:ring-fuchsia-400" ></textarea>
         </div>
         <button className="w-[110px] p-2 rounded-[8px] font-bold bg-gradient-to-r from-fuchsia-500 to-55106D text-white shadow-md shadow-fuchsia-400">Send</button>
       </form>

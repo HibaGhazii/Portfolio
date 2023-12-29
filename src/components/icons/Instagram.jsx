@@ -1,6 +1,6 @@
 export default function Linkedin(){
     return(
-        <div className="border border-white px-[5px] py-[5px] rounded-full flex items-center justify-center">
+        <div className=" hover:bg-fuchsia-700/30 border border-white px-[5px] py-[5px] rounded-full flex items-center justify-center">
             <svg
                 width="16"
                 height="16"

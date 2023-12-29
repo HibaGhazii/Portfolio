@@ -2,8 +2,8 @@ import React from 'react';
 
 const Skills = () => {
  return (
-    <div id='Skills' className="-translate-y-[100px] bg-161616 text-white text-center py-10 px-40 mx-40 rounded-[100px]">
-      <div>
+    <div id='Skills' className="md:-translate-y-[100px] -translate-y-16 bg-161616 text-white text-center py-10 px-12 lg:mx-40 md:mx-20 rounded-[100px]">
+      <div className='mb-4 md:mb-0'>
         <p className='text-2xl font-bold mb-3'>Skills</p>
         {/* <p className='mx-28'>En tant que développeuse, je possède les compétences suivantes : </p> */}
         <p>→ Maîtrise des langages tels que JavaScript, HTML, CSS, et PHP</p>
@@ -13,19 +13,19 @@ const Skills = () => {
         <p>→ Compétences en UI/UX Design pour créer des expériences utilisateur</p>
        
       </div>
-      <div className='flex flex-row justify-between mt-12 mx-32'>
+      <div className='hidden md:flex md:flex-row md:justify-between md:mt-12 mx-12 md:mx-44'>
         <div className=''>
-          <img src="/img/meter1.svg" className='h-32 pb-2' alt="Web Development" />
+          <img src="/img/meter1.svg" className='md:h-32 md:pb-2' alt="Web Development" />
           <p className=''>Web Design</p>
         </div>
 
         <div className=''>
-          <img src="/img/meter2.svg" className='h-32 pb-2' alt="Web Design" />
+          <img src="/img/meter2.svg" className='md:h-32 md:pb-2' alt="Web Design" />
           <p className=''>UI/UX Design</p>
         </div>
 
         <div className=''>
-          <img src="/img/meter3.svg" className='h-32 pb-2' alt="UI/UX Design" />
+          <img src="/img/meter3.svg" className='md:h-32 md:pb-2' alt="UI/UX Design" />
           <p className=''>Web Development</p>
         </div>
         {/* <p className=' bg-55106D p-2 rounded-full'>HTML</p>
