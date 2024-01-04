@@ -13,8 +13,8 @@ const Skills = () => {
         <p>→ Compétences en UI/UX Design pour créer des expériences utilisateur</p>
        
       </div>
-      <div className='hidden md:flex md:flex-row md:justify-between md:mt-12 mx-12 md:mx-44'>
-        <div className=''>
+      <div className='hidden md:inline-flex md:flex-row md:justify-between md:mt-12 mx-12 md:gap-6 lg:gap-28'>
+        <div >
           <img src="/img/meter1.svg" className='md:h-32 md:pb-2' alt="Web Development" />
           <p className=''>Web Design</p>
         </div>
