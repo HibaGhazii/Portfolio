@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import getInTouch from "../assets/img/contact-img.svg";
 
 const GetInTouch = () => {
 
@@ -40,9 +41,9 @@ const GetInTouch = () => {
   // }
 
   return (
-    <div id='Message' className="flex flex-col md:items-center md:flex-row bg-[url('../public/img/footer-bg.png')] bg-cover mt-28 pb-28">
+    <div id='Message' className="flex flex-col md:items-center md:flex-row bg-[url('../src/assets/img/footer-bg.png')] bg-cover mt-28 pb-28">
       <div className='md:w-1/2 md:pl-32'>
-        <img src="/img/contact-img.svg" className='w-[400px] h-[400px] md:w-[500px] md:h-[500px]' />
+        <img src={getInTouch} className='w-[400px] h-[400px] md:w-[500px] md:h-[500px]' />
       </div>
 
       <form ref={form} onSubmit={sendEmail} className='md:w-1/2 md:py-12 py-4 md:pl-16 flex flex-col gap-y-2 text-black'>

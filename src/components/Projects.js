@@ -1,4 +1,27 @@
 import React, { useState } from 'react';
+import todolist from '../assets/realisations/web/todolist.PNG';
+import rockPaperScissorsPlaceholder from '../assets/realisations/web/rock-paper-scissors-placeholder.PNG';
+import rockPaperScissors from '../assets/realisations/web/rock-paper-scissor.PNG';
+import react from '../assets/realisations/web/react/add.PNG';
+import reactPlaceholder from '../assets/realisations/web/react/placeholder.PNG';
+import reactTodolist from '../assets/realisations/web/react/todolist.PNG';
+import jsonBlogs from '../assets/realisations/web/JSON/blogs.PNG';
+import jsonCreate from '../assets/realisations/web/JSON/create.PNG';
+import sonatrach from '../assets/realisations/web/sonatrach/sonatrach.PNG';
+import sonatrachPlaceholder from '../assets/realisations/web/sonatrach/2.PNG'
+import infrarail from '../assets/realisations/web/infrarail/infrarail1.PNG'
+import infrarailPlaceholder from '../assets/realisations/web/infrarail/placeholder.PNG'
+import mezghena from '../assets/realisations/web/mezghena/mezghena.png'
+import mezghenaPlaceholder from '../assets/realisations/web/mezghena/mezghena-placeholder.png'
+import amazon from '../assets/realisations/e-commerce/amazon/amazon.PNG'
+import amazonPlaceholder from '../assets/realisations/e-commerce/amazon/index.PNG'
+import shop from '../assets/realisations/e-commerce/amazon/amazon.PNG'
+import shopPlaceholder from '../assets/realisations/e-commerce/ecom-python/placeholder.PNG'
+import figma from '../assets/realisations/design/portfolio-figma/portfolio.PNG'
+import figmaPlaceholder from '../assets/realisations/design/portfolio-figma/placeholder.PNG'
+import canva from '../assets/realisations/design/portfolio-canva/portfolio-canva.PNG'
+import canvaPlaceholder from '../assets/realisations/design/portfolio-canva/2.PNG'
+
 
 const Modal = ({ closeModal, imageURL, description}) => {
   return (
@@ -7,7 +30,7 @@ const Modal = ({ closeModal, imageURL, description}) => {
         <div className="flex flex-col md:flex-row">
           
           <div className="flex flex-col md:w-1/2 ">
-            <img src={imageURL} alt="Project" className="w-full h-full rounded-lg" />
+            <img src={process.env.PUBLIC_URL + imageURL} alt="Project" className="w-full h-full rounded-lg" />
           </div>
 
           <div className="md:w-1/2 p-5 md:p-[100px]">
@@ -31,63 +54,68 @@ const Projects = () => {
   
   const PhotosWeb = [
     {
-      image:'/realisations/web/todolist.png',
-      placeholderImage:'/realisations/web/todolist.png',
+      image: todolist,
+      placeholderImage: todolist,
       description:"Le site offre une liste de tâches à accomplir avec une date précise, permettant aux utilisateurs d'ajouter leurs propres tâches Développé avec : HTML,CSS et Javascipt"
     },
     {
-      image:'/realisations/web/rock-paper-scissor.png',
-      placeholderImage:'/realisations/web/rock-paper-scissors-placeholder.png',
+      image:rockPaperScissors,
+      placeholderImage:rockPaperScissorsPlaceholder,
       description:"Site qui propose un jeu de pierre-papier-ciseaux à jouer contre l'ordinateur avec fonction de lecture automatique. Développé avec : HTML,CSS et Javascipt"
     },
     {
-      image:'/realisations/web/react/add.png',
-      placeholderImage:'/realisations/web/react/placeholder.png',
+      image:react,
+      placeholderImage:reactPlaceholder,
       description:"Un site de Blogs dynamique, il offre la possibilité de créer, modifier, consulter les détails et supprimer les blogs en toute simplicité. Développé avec : React JS, HTML, Tailwind And JSON Server"
     },
     {
-      image:'/realisations/web/react/todolist.png',
-      placeholderImage:'/realisations/web/react/todolist.png',
+      image: reactTodolist,
+      placeholderImage: reactTodolist,
       description:"L'interface offre une liste de tâches à accomplir, permettant aux utilisateurs d'ajouter leurs propres tâches Développé avec : React JS et Tailwind"
     },
     {
-      image:'/realisations/web/JSON/blogs.png',
-      placeholderImage:'/realisations/web/JSON/create.png',
+      image: jsonBlogs,
+      placeholderImage:jsonCreate,
       description:"Un site de Blogs dynamique, il offre la possibilité de créer, modifier, consulter les détails et supprimer les blogs en toute simplicité. Développé avec : HTML, Tailwind, Javascript with JSON Server"
     },
     {
-      image:'/realisations/web/sonatrach/sonatrach.png',
-      placeholderImage:'/realisations/web/sonatrach/2.png',
+      image:sonatrach,
+      placeholderImage:sonatrachPlaceholder,
       description:"Conception et réalisation d'un Système d'information Géographique(SIG) pour la gestion des périmètres d'exploration. Développé avec : HTML,CSS, Bootstrap, Javascipt, PHP, Laravel, leaflet, HeidiSQL,"
     },
     {
-      image:'/realisations/web/infrarail/infrarail1.png',
-      placeholderImage:'/realisations/web/infrarail/placeholder.png',
+      image:infrarail,
+      placeholderImage: infrarailPlaceholder,
       description:"Site dynamique pour une entreprise ferroviaire. Développé avec : HTML/CSS, Booststrap, Javascipt, PHP, MySql"
+    },
+    {
+      image:mezghena,
+      placeholderImage:mezghenaPlaceholder,
+      description:"Site dynamique pour une entreprise. Développé avec : React js, Tailwind, Flowbite (la suite est en cours de réalisation avec Node Js, Express Js et MysQL)"
     },
   ];
 
   const PhotosEcommerce = [
     {
-      image:'/realisations/e-commerce/amazon/amazon.png',
-      placeholderImage:'/realisations/e-commerce/amazon/index.png',
+      image:amazon,
+      placeholderImage:amazonPlaceholder,
       description:"Site vente et achat des vêtements (Amazon design). Développé avec : Python, Django, Bootstrap, HTML, JavaScript"
     },
     {
-      image:'/realisations/e-commerce/ecom-python/shop-index.png',
-      placeholderImage:'/realisations/e-commerce/ecom-python/placeholder.png',
+      image:shop,
+      placeholderImage:shopPlaceholder,
       description:"Site vente et achat des vêtements (e-commerce). Développé avec : Python, Django, Bootstrap, HTML, JavaScript"
     },
   ];
 
   const PhotosDesign = [
     {
-      image:'/realisations/design/portfolio-figma/portfolio.png',
-      placeholderImage:'/realisations/design/portfolio-figma/placeholder.png',
+      image:figma,
+      placeholderImage:figmaPlaceholder,
       description:"Ce design expose mes compétences, mes projets, mes réalisations et mon expertise dans le domaine du développement web .Fait avec: Figma "
     },{
-      image:'/realisations/design/portfolio-canva/portfolio-canva.png',
-      placeholderImage:'/realisations/design/portfolio-canva/2.png',
+      image:canva,
+      placeholderImage:canvaPlaceholder,
       description:"Ce design expose mes compétences, mes projets, mes réalisations et mon expertise dans le domaine du développement web .Fait avec: Canva"
     }
   ];
@@ -134,7 +162,7 @@ const Projects = () => {
             <div key={index} className="relative">
               
               <img
-                src={selectedImage === link ? link.image : link.placeholderImage}
+                src={selectedImage === link ? (process.env.PUBLIC_URL + link.image) : link.placeholderImage}
                 alt="Project"
                 onClick={() => openModal(link)}
                 className="md:w-[300px] md:h-[140px] w-[200px] h-[100px] rounded-[40px] transition-opacity ease-in-out duration-300"

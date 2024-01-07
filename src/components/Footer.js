@@ -14,7 +14,7 @@ const Footer = () => {
   
   return (
     
-    <div className="bg-[url('../public/img/footer-bg.png')]">
+    <div className="bg-[url('../src/assets/img/footer-bg.png')]">
      
       <div>
         <CV/>

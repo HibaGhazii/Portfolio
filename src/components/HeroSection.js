@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
-
+import header from "../assets/img/header-img.svg";
 
 const HeroSection = () => {
 
@@ -12,7 +12,7 @@ const HeroSection = () => {
   });
   
   return (
-    <div className="flex flex-col md:flex-row bg-[url('../public/img/banner-bg.png')] py-24 md:py-40 ">
+    <div className="flex flex-col md:flex-row bg-[url('../src/assets/img/banner-bg.png')] py-24 md:py-40 ">
             <div className="md:w-1/2 p-5 md:p-10 md:pl-32">
                 <button className="bg-none text-white font-bold text-center border border-white py-2 px-4 rounded-lg">Welcome to my Portfolio</button>
                 <p className="text-white text-4xl font-bold pt-5">
@@ -30,7 +30,7 @@ const HeroSection = () => {
             </div>
             
             <div className="md:w-1/2 p-4">
-              <img src="/img/header-img.svg" className="h-80 w-full" alt="" />
+              <img src={header} className="h-80 w-full" alt="" />
             </div>
     </div>
   ); 

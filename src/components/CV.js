@@ -1,9 +1,9 @@
 import React from 'react';
-
+import cv from '../assets/Cv/CV-GHAZI-HIBA.pdf';
 const CV = () => {
   const downloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/Cv/CV-GHAZI-HIBA.pdf'; 
+    link.href =  cv;
     link.rel = 'noopener noreferrer';
     link.click();
   };

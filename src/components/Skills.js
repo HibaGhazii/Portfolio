@@ -1,4 +1,7 @@
 import React from 'react';
+import meter1 from "../assets/img/meter1.svg";
+import meter2 from "../assets/img/meter2.svg";
+import meter3 from "../assets/img/meter3.svg";
 
 const Skills = () => {
  return (
@@ -15,17 +18,17 @@ const Skills = () => {
       </div>
       <div className='hidden md:inline-flex md:flex-row md:justify-between md:mt-12 mx-12 md:gap-6 lg:gap-28'>
         <div >
-          <img src="/img/meter1.svg" className='md:h-32 md:pb-2' alt="Web Development" />
+          <img src={meter1} className='md:h-32 md:pb-2' alt="Web Design" />
           <p className=''>Web Design</p>
         </div>
 
         <div className=''>
-          <img src="/img/meter2.svg" className='md:h-32 md:pb-2' alt="Web Design" />
+          <img src={meter2} className='md:h-32 md:pb-2' alt="UI/UX Design" />
           <p className=''>UI/UX Design</p>
         </div>
 
         <div className=''>
-          <img src="/img/meter3.svg" className='md:h-32 md:pb-2' alt="UI/UX Design" />
+          <img src={meter3} className='md:h-32 md:pb-2' alt="Web Development" />
           <p className=''>Web Development</p>
         </div>
         {/* <p className=' bg-55106D p-2 rounded-full'>HTML</p>
